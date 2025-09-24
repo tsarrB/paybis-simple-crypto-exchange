@@ -22,7 +22,7 @@ const DEFAULT_BALANCES = {
 }
 
 // TODO: make as store
-export const useUserWallet = (params: { onTransactionSuccess?: () => void }) => {
+export const useUserWallet = (params: { onTransactionSuccess?: () => void } = {}) => {
   // Emulate profile balances
   const balances = useLocalStorage<WalletBalance>('crypto-wallet-balances', {
     ...DEFAULT_BALANCES,
